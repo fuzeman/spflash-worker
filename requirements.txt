@@ -1,0 +1,4 @@
+pyvirtualdisplay
+selenium
+celery
+redis
