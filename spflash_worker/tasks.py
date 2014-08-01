@@ -39,7 +39,8 @@ def sp_run(driver, ping, retry=3):
     for x in xrange(retry):
         try:
             return driver.execute_script("return document.getElementById('SPFBIn_2072_player').sp_run(arguments[0])", ping)
-        except WebDriverException:
+        except WebDriverException, ex:
+            log.warn(ex)
             time.sleep(1)
 
     return None
