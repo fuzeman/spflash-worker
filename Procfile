@@ -1,1 +1,1 @@
-worker: celery -A spflash_worker.tasks worker --loglevel=info
+worker: celery -A spflash_worker.tasks worker --loglevel=debug
