@@ -1,2 +1,3 @@
+deb http://archive.canonical.com/ubuntu/ precise partner
 deb http://us.archive.ubuntu.com/ubuntu/ precise multiverse
 deb http://us.archive.ubuntu.com/ubuntu/ precise-updates multiverse
