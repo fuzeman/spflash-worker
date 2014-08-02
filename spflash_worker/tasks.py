@@ -48,13 +48,13 @@ def sp_run(driver, ping, retry=3):
 
 def get_driver(version):
     if version not in drivers:
-        log.debug("Constructing driver...")
+        log.info("Constructing driver...")
         drivers[version] = webdriver.PhantomJS()
 
-        log.debug("Loading host page...")
+        log.info("Loading host page...")
         drivers[version].get("http://%s/%s/host" % (hostname, version))
 
-        log.debug("Waiting for page to finish loading...")
+        log.info("Waiting for page to finish loading...")
         WebDriverWait(drivers[version], 10).until(EC.presence_of_element_located((By.ID, "SPFBIn_2072_player")))
 
     return drivers[version]
